@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Flex Direction</title>
+	<style>
+	body{
+		background-color:f5f5f5;
+		color:#555;
+		font-size:1.6em;
+	}
+	.content{
+
+	}
+	.flex-container{
+		margin:250px auto;
+		max-width: 800px;
+		padding:2px;
+		border:2px solid red;
+		display:flex;
+		background-color:#f2f2f2;
+	}
+	.flex-item{
+		width:100px;
+		height:100px;
+		margin:2px;
+		line-height:100px;
+		font-weight:bold;
+		border: 2px solid ;
+		text-align:center;
+		background-color: #fa1244;
+		color:white;
+			
+	}
+	.controls{
+		position:fixed;
+		border:2px solid red;
+		width:400px;
+		line-height:150%;
+		bottom:270px;
+		right:30px;
+	}
+</style>
+</head>
+<body>
+  <div class="content">
+	<div class="flex-container" id="flex-container">
+		<div class="flex-item">Item1</div>
+		<div class="flex-item">Item2</div>
+		<div class="flex-item">Item3</div>
+		<div class="flex-item">Item4</div>
+		<div class="flex-item">Item5</div>
+	</div>
+	<div class="controls">
+		<input type="radio" name="flex-direction" id="row" onclick="var container=document.getElementById('flex-container');
+		container.style.flexDirection='row'; "checked><label>flex-direction :row;</label>
+		<br/>
+		<input type="radio" name="flex-direction" id="row-reverse" onclick="var container=document.getElementById('flex-container');
+		container.style.flexDirection= 'row-reverse';" ><label>flex-direction:row-reverse;</label>
+		<br/>
+		<input type="radio" name="flex-direction" id="column" onclick="var container=document.getElementById('flex-container');
+		container.style.flexDirection='column';"><label>flex-direction :column;</label>
+		<br/>
+		<input type="radio" name="flex-direction" id="column-reverse" onclick="var container=document.getElementById('flex-container');
+		container.style.flexDirection='column-reverse';" ><label>flex-direction:column-reverse;</label>
+	</div>
+ </div>
+</body>
+</html>
